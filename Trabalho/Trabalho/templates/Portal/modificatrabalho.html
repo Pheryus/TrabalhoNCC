@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Alterar Trabalho{% endblock %}
+
+{% block content %}
+
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'css/trabalho.css' %}">
+	<h3>Modificar trabalho</h3>
+	<h3> {{ msg }}</h3>
+	<form action = "." enctype="multipart/form-data" method="post"> {% csrf_token %}
+		{{ form.as_p }}
+
+		<input type="hidden" name="prox" value="{{ prox }}" />
+		<input type="hidden" name="msg" value="{{ msg }}" />
+
+		{% if trabalho.status == "Não enviado" %}
+			<p><input type="submit" value="Enviar"></p>
+		{% endif %}
+
+	</form>
+<br><br><br>
+
+<a href="/home">Voltar</a>
+
+<a href="/logout/"> Logout </a>
+
+{% endblock %}

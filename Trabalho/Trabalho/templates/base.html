@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang"pt-br">
+{% load staticfiles %}
+
+<link rel='stylesheet' type='text/css' href="{% static 'css/base.css' %}" />
+<center>
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %} {% endblock %}</title>
+		{% block extrahead %}{% endblock %}
+
+		<img src="http://wiki.inf.ufsm.br/lib/exe/fetch.php?media=wiki:logo.png">
+	</head> 
+
+	<body style="background-color: lightgray">
+		{% block content %} {% endblock %}
+		{% block extrajs %} {% endblock %}
+	</body>
+
+	<style>
+		table, th, td {
+			border: 1px solid #D4E0EE;
+			border-collapse: collapse;
+			font-family: "Trebuchet MS", Arial, sans-serif;
+			color: #555;
+		}
+
+		th,td {
+			padding: 4px;
+		}
+
+		thead, th{
+			text-align: center;
+			background: #E6EDF55;
+			color: #4F76A3;
+			font-size: 100% !important;
+		}
+		#id_trabalho {
+			width: 300px;
+			height: 300px;
+		}
+		.tabela {
+			padding:
+		}
+
+	</style>
+</center>
+
+
+</hml>
